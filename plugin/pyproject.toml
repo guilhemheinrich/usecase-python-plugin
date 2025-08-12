@@ -8,10 +8,12 @@ version = "0.1.0"
 description = "Hello world plugin for core plugin system"
 authors = [{name = "User", email = "user@example.com"}]
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "core-plugin-system"
+]
 
 [project.entry-points."core.plugins"]
-hello_world = "plugin.functions:hello_world"
+cow = "plugin.animals:Cow"
 
 [tool.poetry]
 name = "plugin-hello"
@@ -22,5 +24,6 @@ packages = [{include = "plugin"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+core-plugin-system = {path = "../core", develop = true}
 
 
