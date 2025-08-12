@@ -8,13 +8,13 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Install packages in correct order
 echo "📦 Installing core package..."
-cd core && poetry install && cd ..
+cd core && poetry install && pip install -e . && cd ..
 
 echo "🔌 Installing plugin package..."
-cd plugin && poetry install && cd ..
+cd plugin && poetry install && pip install -e . && cd ..
 
 echo "🎯 Installing final demo package..."
-cd final && poetry install && cd ..
+cd final && poetry install && pip install -e . && cd ..
 
 echo "✅ Setup complete! You can now run:"
 echo "   cd final && poetry run python test_demo.py"
