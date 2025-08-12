@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "core-plugin-system"
+version = "0.1.0"
+description = "Core plugin system with entrypoint discovery"
+authors = [{name = "User", email = "user@example.com"}]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.entry-points."core.plugins"]
+# Entry point group for plugins
+
+[tool.setuptools.packages.find]
+where = ["."]

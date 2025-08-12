@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "core-plugin-system"
+version = "0.1.0"
+description = "Core plugin system with entrypoint discovery"
+authors = ["User <user@example.com>"]
+packages = [{include = "core"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.plugins."core.plugins"]
+# Entry point group for plugins
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

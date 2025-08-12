@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plugin-hello"
+version = "0.1.0"
+description = "Hello world plugin for core plugin system"
+authors = [{name = "User", email = "user@example.com"}]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.entry-points."core.plugins"]
+hello_world = "plugin.functions:hello_world"
+
+[tool.setuptools.packages.find]
+where = ["."]
