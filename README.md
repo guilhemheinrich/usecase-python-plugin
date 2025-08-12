@@ -23,17 +23,9 @@ pip install -e plugin/
 pip install -e final/
 ```
 
-### Option 2: Using Poetry
+### Option 2: Using Poetry (modern PEP 621 syntax)
 
-If you prefer Poetry, rename the files:
-
-```bash
-# In each directory (core, plugin, final):
-mv pyproject.toml pyproject-setuptools.toml
-mv pyproject-poetry.toml pyproject.toml
-```
-
-Then install:
+The pyproject.toml files now use the modern PEP 621 syntax which works with both setuptools and Poetry:
 
 ```bash
 # Install core package
@@ -50,6 +42,21 @@ cd ..
 cd final/
 poetry install
 ```
+
+Note: Requires Python >=3.9 for full PEP 621 support.
+
+### Option 3: Using DevContainer
+
+If you use VS Code or GitHub Codespaces, you can use the provided devcontainer:
+
+1. Open the project in VS Code
+2. When prompted, click "Reopen in Container"
+3. Once the container is built, run the setup script:
+   ```bash
+   ./.devcontainer/setup.sh
+   ```
+
+The devcontainer includes Python 3.10, pip, and Poetry pre-configured.
 
 ## Usage
 

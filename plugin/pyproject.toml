@@ -1,3 +1,18 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "plugin-hello"
+version = "0.1.0"
+description = "Hello world plugin for core plugin system"
+authors = [{name = "User", email = "user@example.com"}]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.entry-points."core.plugins"]
+hello_world = "plugin.functions:hello_world"
+
 [tool.poetry]
 name = "plugin-hello"
 version = "0.1.0"
@@ -6,11 +21,6 @@ authors = ["User <user@example.com>"]
 packages = [{include = "plugin"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
-[tool.poetry.plugins."core.plugins"]
-hello_world = "plugin.functions:hello_world"
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
